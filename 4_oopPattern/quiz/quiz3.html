@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>quiz2</title>
+</head>
+
+<body>
+<script>
+
+/*
+아래의 결과가 나오도록 코드를 작성하세요.
+ */
+ 
+
+(function() {
+	window.addEventListener("DOMContentLoaded", function() {
+
+		// 여기 아래에 코드를 작성하세요.
+		// prototype을 사용해야 합니다.
+
+
+		
+
+
+
+		// console.log에 다음처럼 두 번의 결과가 나와야 합니다.
+		var mt = new MYTODO();
+		mt.addWork("study");
+		mt.addWork("meeting");
+		mt.addWork("study C++");
+		mt.addWork("study JAVASCRIPT");
+		console.log(mt.getWorkList());    //["study", "meeting", "study C++", "study JAVASCRIPT"] 
+
+		mt.deleteWork("study C++");
+		console.log(mt.getWorkList());    //["study", "meeting", "study JAVASCRIPT"] 
+
+	});
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>quiz2</title>
+<style>
+
+ul {list-style:none;width:1000px;margin:40px auto;}
+ul li {width:200px;height:200px;outline:1px solid gray;display:inline-block;line-height:200px;text-align:center;}
+	
+</style>
+</head>
+<body>
+
+<ul>
+	<li>2012</li>
+	<li>2013</li>
+	<li>2014</li>
+	<li>2015</li>
+</ul>
+<script>
+
+/*
+ 다음 결과가 아래처럼 나오도록 하세요.
+ '반갑습니다 ^^
+  홍길동님'
+
+  myController와 DATA_MESSAGE는 수정할 수 없습니다.
+
+ */
+
+(function() {
+	window.addEventListener("DOMContentLoaded", function() {
+		registerEvent();
+
+		function registerEvent() {
+			var listLI = document.querySelectorAll("ul > li");
+			var listLILength = listLI.length;
+
+			for(var i=0; i<listLILength; i++) {
+				(function(i){
+					listLI[i].addEventListener("click", function(e) {
+						alert( i + 1 +  " 번째년도 입니다. \n" + e.target.innerText);
+					});
+				})(i);
+			}
+		}
+
+	});
+
+})();
+</script>
+
+</body>
+</html>

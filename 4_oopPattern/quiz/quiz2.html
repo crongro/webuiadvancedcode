@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>quiz2</title>
+<style>
+
+ul {list-style:none;width:1000px;margin:40px auto;}
+ul li {width:200px;height:200px;outline:1px solid gray;display:inline-block;line-height:200px;text-align:center;}
+	
+</style>
+</head>
+<body>
+
+<ul>
+	<li>2012</li>
+	<li>2013</li>
+	<li>2014</li>
+	<li>2015</li>
+</ul>
+<script>
+
+/*
+2013년을 클릭하면 아래와 같은 메시지가 나와야 합니다.
+-----
+2번째년도 입니다
+2013
+-----
+
+하지만 지금은 그렇지 않습니다. 
+1. 올바르게 동작하도록 소스코드를 수정하세요.
+
+ */
+ 
+
+(function() {
+	window.addEventListener("DOMContentLoaded", function() {
+		registerEvent();
+
+		function registerEvent() {
+			var listLI = document.querySelectorAll("ul > li");
+			var listLILength = listLI.length;
+
+			for(var i=0; i<listLILength; i++) {
+				listLI[i].addEventListener("click", function(e) {
+					alert( i + 1 +  " 번째년도 입니다. \n" + e.target.innerText);
+				});
+			}
+		}
+
+	});
+
+})();
+</script>
+
+</body>
+</html>
